@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'moviebuff';
+  title = 'New movies are yet to be added';
+
+  changeTextInTitle(){
+    this.title = 'The new movie title is Changed';
+  }
 }
