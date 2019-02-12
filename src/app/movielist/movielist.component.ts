@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-movielist',
@@ -7,31 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovielistComponent implements OnInit {
 
+  @Input() movieList: any;
+  @Input('actors') actorList: any;
   dataBinding: boolean = false;
   twoWayBinding: string = '';
-  movies = [
-    {
-      "_id": "5c60d2dfd4c2dc72259087ec",
-      "movietitle": "Rodeocean",
-      "genre": "Fantasy",
-      "rating": 5,
-      "desc": "velit in sunt occaecat exercitation qui amet ex elit labore excepteur occaecat veniam nisi irure Lorem minim excepteur irure aliquip"
-    },
-    {
-      "_id": "5c60d2df54548a881818d257",
-      "movietitle": "Oronoko",
-      "genre": "Fantasy",
-      "rating": 8,
-      "desc": "esse ullamco cupidatat cillum cillum nostrud esse qui sit fugiat consectetur exercitation amet ut ad irure commodo fugiat cupidatat nostrud"
-    },
-    {
-      "_id": "5c60d2dfe6acbcab33806898",
-      "movietitle": "Sulfax",
-      "genre": "Sci-Fi",
-      "rating": 8,
-      "desc": "aliqua tempor qui tempor non consectetur nostrud velit veniam Lorem proident esse excepteur consequat labore sint do fugiat velit officia"
-    }
-  ];
 
   constructor() { }
 
@@ -39,7 +18,7 @@ export class MovielistComponent implements OnInit {
   }
 
   addMovieName(){
-    this.movies.push({
+    this.movieList.push({
       _id: "741236589",
       movietitle: this.twoWayBinding,
       genre: "Fantasy",

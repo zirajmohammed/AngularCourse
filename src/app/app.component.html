@@ -3,4 +3,12 @@
 
 <app-header></app-header>
 <app-moviedetails></app-moviedetails>
-<app-movielist></app-movielist>
+<app-movielist 
+    [movieList] = movies
+    [actors] = actorListComplete
+></app-movielist>
+
+-------------------------------------------------------------------
+<p *ngFor="let r of movies;let i = index">
+    {{r.movietitle}} - {{i}}
+</p>

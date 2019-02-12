@@ -6,8 +6,15 @@
   <button class="btn" [disabled] = 'dataBinding' (click)='addMovieName()'>Add</button><!-- Property Binding, Event Binding --> 
 </div>
 <div><h3>{{twoWayBinding}}</h3></div><!-- String Interpolation -->
+
 <div class="add">
-  <p *ngFor="let r of movies;let i = index">
+  <p *ngFor="let r of actorList;let i = index">
+    {{r.name}} - {{i}}
+  </p>
+</div>
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<div class="add">
+  <p *ngFor="let r of movieList;let i = index">
     {{r.movietitle}} - {{i}}
   </p>
 </div>
