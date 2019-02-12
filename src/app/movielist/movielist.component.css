@@ -1,0 +1,11 @@
+.btn{
+    width: 100px;
+    background: #009688;
+    border: 0;
+    color: white;
+    height: 25px;
+    margin-left: 10px;
+}
+.btn:disabled{
+    background: #0096889c;
+}
