@@ -7,6 +7,8 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 })
 export class AppComponent {
   title = 'New movies are yet to be added';
+  clickedMovieName = '';
+  clickedAliasMovieName = '';
 
   actorListComplete = [
     {
@@ -42,7 +44,16 @@ export class AppComponent {
       "desc": "aliqua tempor qui tempor non consectetur nostrud velit veniam Lorem proident esse excepteur consequat labore sint do fugiat velit officia"
     }
   ];
+
   changeTextInTitle() {
     this.title = 'The new movie title is Changed';
+  }
+
+  movieClickData(data){
+    this.clickedMovieName = data.movietitle;
+  }
+
+  movieClickAliasData(data){
+    this.clickedAliasMovieName = data.movietitle;
   }
 }

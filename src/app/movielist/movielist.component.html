@@ -16,5 +16,7 @@
 <div class="add">
   <p *ngFor="let r of movieList;let i = index">
     {{r.movietitle}} - {{i}}
+    <button (click) = movieData(r)>Click</button>
+    <button (click) = movieAliasData(r)>Alias Click</button>
   </p>
 </div>

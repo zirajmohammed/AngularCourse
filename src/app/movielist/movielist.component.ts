@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-movielist',
@@ -9,6 +9,9 @@ export class MovielistComponent implements OnInit {
 
   @Input() movieList: any;
   @Input('actors') actorList: any;
+  
+  @Output() movieClick = new EventEmitter();
+  @Output('outAlias') movieClickAlias = new EventEmitter();
   dataBinding: boolean = false;
   twoWayBinding: string = '';
 
@@ -25,6 +28,13 @@ export class MovielistComponent implements OnInit {
       rating: 5,
       desc: "velit in sunt occaecat exercitation qui amet ex elit labore excepteur occaecat veniam nisi irure Lorem minim excepteur irure aliquip"
     });
+  }
+
+  movieData(data){
+    this.movieClick.emit(data);
+  }
+  movieAliasData(data){
+    this.movieClickAlias.emit(data);
   }
 
 }

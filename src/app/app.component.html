@@ -1,11 +1,15 @@
 <h1>{{ title }}</h1>
 <button (click)="changeTextInTitle()">Click Here to change</button>
 
-<app-header></app-header>
+<div><h3>Movie Name that is clicked : {{clickedMovieName}}</h3></div>
+<div><h3>Movie Alias Name that is clicked : {{clickedAliasMovieName}}</h3></div>
+<!-- <app-header></app-header> -->
 <app-moviedetails></app-moviedetails>
 <app-movielist 
     [movieList] = movies
-    [actors] = actorListComplete
+    [actors] = actorListComplete 
+    (movieClick) = movieClickData($event)
+    (outAlias) = movieClickAliasData($event)
 ></app-movielist>
 
 -------------------------------------------------------------------
