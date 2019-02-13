@@ -22,10 +22,10 @@ export class MovielistComponent implements OnInit {
   ngOnInit() {
   }
 
-  addMovieName(){
+  addMovieName(inputElement:HTMLInputElement){
     this.movieList.push({
       _id: "741236589",
-      movietitle: this.twoWayBinding,
+      movietitle: inputElement.value,
       genre: "Fantasy",
       rating: 5,
       desc: "velit in sunt occaecat exercitation qui amet ex elit labore excepteur occaecat veniam nisi irure Lorem minim excepteur irure aliquip"

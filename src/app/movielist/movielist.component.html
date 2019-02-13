@@ -2,8 +2,12 @@
   <h2>Add New Movie :</h2> 
 </div>
 <div class="otr">
-  <input class="addmovie" [(ngModel)] = "twoWayBinding" /> <!-- TwoWay Binding -->
-  <button class="btn" [disabled] = 'dataBinding' (click)='addMovieName()'>Add</button><!-- Property Binding, Event Binding --> 
+  <input 
+    class="addmovie" 
+    [(ngModel)] = "twoWayBinding" 
+    #addMovieEvent
+  /> <!-- TwoWay Binding -->
+  <button class="btn" [disabled] = 'dataBinding' (click)='addMovieName(addMovieEvent)'>Add</button><!-- Property Binding, Event Binding --> 
 </div>
 <div><h3>{{twoWayBinding}}</h3></div><!-- String Interpolation -->
 
