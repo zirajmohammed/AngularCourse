@@ -9,3 +9,25 @@
 .btn:disabled{
     background: #0096889c;
 }
+
+.add{
+    background: cadetblue;
+    padding: 5px 20px;
+}
+.click{
+    background: #4a797b;
+    border: 0;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.aliasClick{
+    background: #4a797b;
+    border: 0;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
