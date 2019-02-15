@@ -9,7 +9,6 @@
 .btn:disabled{
     background: #0096889c;
 }
-
 .add{
     background: cadetblue;
     padding: 5px 20px;
@@ -30,4 +29,7 @@
     border-radius: 5px;
     margin-left: 10px;
     cursor: pointer;
+}
+.active{
+    background: red;
 }

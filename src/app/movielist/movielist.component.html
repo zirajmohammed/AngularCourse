@@ -22,7 +22,8 @@
 <div class="add">
   <p *ngFor="let r of movieList;let i = index">
     {{r.movietitle}} - {{i}}
-    <button class="click" (click) = movieData(r)>Click</button>
+    <button class="click" (click) = movieData(r)  [ngClass]="{active: i == 1}"
+    >Click</button>
     <button class="aliasClick" (click) = movieAliasData(r)>Alias Click</button>
   </p>
 </div>
