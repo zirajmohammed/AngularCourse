@@ -12,9 +12,11 @@
 <div><h3>{{twoWayBinding}}</h3></div><!-- String Interpolation -->
 
 <div class="add">
-  <p *ngFor="let r of actorList;let i = index">
-    {{r.name}} - {{i}}
-  </p>
+  <ng-container *ngFor="let r of actorList;let i = index" >
+    <p *ngIf="i==1"> <!--NgIf with NgFor in two separate lines  -->
+      {{r.name}} - {{i}}
+    </p>
+  </ng-container>
 </div>
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 <div class="add">
